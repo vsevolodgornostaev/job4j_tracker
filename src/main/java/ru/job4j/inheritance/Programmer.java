@@ -4,8 +4,9 @@ public class Programmer extends Engineer {
 
     private int operation;
 
-    public Programmer(String name, String surname, String education, String birthday) {
-        super(name, surname, education, birthday);
+    public Programmer(String name, String surname, String education, String birthday, String note, int operation) {
+        super(name, surname, education, birthday, note);
+        this.operation = operation;
     }
 
     public Check validate(Validation validation) {
