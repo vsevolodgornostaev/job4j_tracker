@@ -40,14 +40,4 @@ public class Item {
     public LocalDateTime getCreated() {
         return created;
     }
-
-    public static class StartUI {
-        public static void main(String[] args) {
-            Item item = new Item();
-            LocalDateTime itemDateTime = item.getCreated();
-            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MMMM-EEEE-yyyy HH:mm:ss");
-            String itemDateTimeFormat = itemDateTime.format(formatter);
-            System.out.println("Текущие дата и время после форматирования: " + itemDateTimeFormat);
-        }
-    }
 }
