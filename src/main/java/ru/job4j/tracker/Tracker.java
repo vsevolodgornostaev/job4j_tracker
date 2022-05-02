@@ -32,8 +32,7 @@ public class Tracker {
                 count++;
             }
         }
-        rsl = Arrays.copyOf(rsl, count);
-        return rsl;
+        return Arrays.copyOf(rsl, count);
     }
 
     private int indexOf(int id) {
@@ -41,14 +40,17 @@ public class Tracker {
         for (int index = 0; index < size; index++) {
             if (items[index].getId() == id) {
                 rsl = index;
+                break;
             }
         }
         return rsl;
     }
 
     public boolean replace(int id, Item item) {
-        items[indexOf(id)].setName(item.getName());
-        if (indexOf(id) > -1) {
+        int index = indexOf(id);
+        if (index != -1) {
+            item.setId(id);
+            items[index] = item;
             return true;
         }
         return false;
