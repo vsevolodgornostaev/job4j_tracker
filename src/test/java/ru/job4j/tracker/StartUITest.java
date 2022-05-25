@@ -2,12 +2,9 @@ package ru.job4j.tracker;
 
 import org.junit.Test;
 
-import javax.swing.*;
-
 import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.nullValue;
 import static org.junit.Assert.assertThat;
-import static org.junit.Assert.assertThrows;
 
 public class StartUITest {
 
@@ -93,7 +90,7 @@ public class StartUITest {
         Tracker tracker = new Tracker();
         Item one = tracker.add(new Item("test"));
         Input in = new StubInput(
-                new String[] {"0", String.valueOf(one.getId()), "0"}
+                new String[] {"0", "1", "0"}
         );
         UserAction[] actions = new UserAction[] {
                 new ShowAction(out),
