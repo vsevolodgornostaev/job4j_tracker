@@ -90,7 +90,7 @@ public class StartUITest {
         Tracker tracker = new Tracker();
         Item one = tracker.add(new Item("test"));
         Input in = new StubInput(
-                new String[] {"0", "1", "0"}
+                new String[] {"0", "1"}
         );
         UserAction[] actions = new UserAction[] {
                 new ShowAction(out),
