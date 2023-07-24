@@ -9,7 +9,6 @@ public class ConvertList {
         for (int[] row : list) {
             for (int cell : row) {
                 rsl.add(cell);
-                System.out.println(cell);
             }
         }
         return rsl;
