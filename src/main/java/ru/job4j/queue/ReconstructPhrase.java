@@ -12,29 +12,24 @@ public class ReconstructPhrase {
     }
 
     private String getEvenElements() {
-        String rsl = null;
         StringBuilder txt = new StringBuilder();
         int size = evenElements.size();
         for (int i = 0; i < size; i++) {
             if (evenElements.size() % 2 == 0) {
                txt.insert(i / 2, evenElements.getFirst());
-               rsl = txt.toString();
             }
             evenElements.poll();
         }
-        return rsl;
+        return txt.toString();
     }
 
     private String getDescendingElements() {
-        String rsl = null;
         StringBuilder txt = new StringBuilder();
         int size = descendingElements.size();
         for (int i = 0; i < size; i++) {
-            txt.insert(i, descendingElements.getLast());
-            rsl = txt.toString();
-            descendingElements.pollLast();
+            txt.insert(i, descendingElements.pollLast());
         }
-        return rsl;
+        return txt.toString();
     }
 
     public String getReconstructPhrase() {
