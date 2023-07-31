@@ -18,8 +18,6 @@ public class PassportOfficeTest {
         Citizen citizen2 = new Citizen("2f44a", "Vsevolod Gornostaev");
         PassportOffice office = new PassportOffice();
         office.add(citizen);
-        office.add(citizen2);
-        boolean expected = false;
-        assertThat(expected).isFalse();
+        assertThat(office.add(citizen2)).isFalse();
     }
 }
