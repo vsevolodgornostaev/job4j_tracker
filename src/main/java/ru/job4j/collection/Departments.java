@@ -10,7 +10,7 @@ public class Departments {
         for (String value : deps) {
             String start = "";
             for (String el : value.split("/")) {
-                start = el.toLowerCase().equals("k1") || el.toLowerCase().equals("k2") ? el : start + "/" + el;
+                start += "".equals(start) ? el : "/" + el;
                 tmp.add(start);
             }
         }
