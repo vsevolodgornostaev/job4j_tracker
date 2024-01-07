@@ -17,11 +17,10 @@ public class PhoneDictionary {
         Predicate<Person> phone = person -> person.getPhone().contains(key);
         Predicate<Person> address = person -> person.getAddress().contains(key);
 
-        Predicate<Person> combine =
-                name.
-                or(surname).
-                or(phone).
-                or(address);
+        Predicate<Person> combine = name
+                        .or(surname)
+                        .or(phone)
+                        .or(address);
 
         for (Person person : persons) {
             if (combine.test(person)) {
